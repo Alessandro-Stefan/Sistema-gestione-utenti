@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -15,7 +17,11 @@ public class Roles {
     @Id
     //identificazione dell id come autoincrement
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String name;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
 }
